@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:volumearea/services/volume.dart';
-import 'package:volumearea/services/area.dart';
+import 'package:volumearea/area/area.dart';
+import 'package:volumearea/volume/volume.dart';
 
 void main() {
   runApp(MaterialApp(
     home: Home(),
     routes: {
       '/volume' : (context) => Volume(),
-      '/area' : (context) => Area(),
+      '/services.area' : (context) => Area(),
     },
   ));
 }
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/area');
+                  Navigator.pushNamed(context, '/services.area');
                 },
                 child: Text('Area'),
               ),
