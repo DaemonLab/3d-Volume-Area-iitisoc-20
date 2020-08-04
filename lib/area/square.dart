@@ -9,7 +9,12 @@ class _squareState extends State<square> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Square'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          //TODO: https://www.omnicalculator.com/math/area
+        ],
+      ),
     );
   }
 }

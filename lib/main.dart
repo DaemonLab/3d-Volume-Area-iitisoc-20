@@ -10,6 +10,7 @@ void main() {
       '/volume' : (context) => Volume(),
       '/area' : (context) => Area(),
       '/square' : (context) => square(),
+      '/rectangle' : (context) => rectangle(),
     },
   ));
 }

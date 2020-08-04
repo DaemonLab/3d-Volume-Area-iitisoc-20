@@ -10,7 +10,8 @@ class _VolumeState extends State<Volume> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(child: Text('Volume')),
+        //TODO: Volume not implemented
+        child: Center(child: Text('Not Implemented Yet')),
       )
       ,
     );

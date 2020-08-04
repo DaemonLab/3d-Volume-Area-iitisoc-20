@@ -9,16 +9,20 @@ class _AreaState extends State<Area> {
   
   
   Widget customCard(String image) {
+    // image variable stores the location of the image of the object. ex. assets/rectangle.dart
+    String shape = image.substring(image.indexOf('/')+1, image.length-4);
+
+    // using InkWell to make tap able cards
     return InkWell(
       onTap: () {
         print(image);
-        Navigator.pushNamed(context, '/area');
+        Navigator.pushNamed(context, '/${shape}');
       },
       child: Card(
         child: Column(
           children: [
             Image.asset(image, height: 150, width: 150,),
-            Text(image.substring(image.indexOf('/')+1, image.length-4))
+            Text(shape)
           ],
         ),
         elevation: 0,
@@ -33,6 +37,7 @@ class _AreaState extends State<Area> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+          // ListView to enable vertical scrolling
           child: ListView(
             children: [
               Column(
