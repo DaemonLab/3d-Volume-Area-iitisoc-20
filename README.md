@@ -1,4 +1,5 @@
-# volumearea
+# Volume / Area Calculator
 
-A new Flutter application.
+Flutter Application to calculate area and volume of given figures.
+
 
