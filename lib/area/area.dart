@@ -16,12 +16,13 @@ class _AreaState extends State<Area> {
     return InkWell(
       onTap: () {
         print(image);
-        Navigator.pushNamed(context, '/${shape}');
+        //Navigator.pushNamed(context, '/${shape}');
       },
       child: Card(
         child: Column(
           children: [
             Image.asset(image, height: 150, width: 150,),
+            SizedBox(height: 10,),
             Text(shape)
           ],
         ),
@@ -45,8 +46,63 @@ class _AreaState extends State<Area> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      customCard('assets/annulus.png'),
+                      customCard('assets/circle.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/ellipse.png'),
+                      customCard('assets/hexagon.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/kite.png'),
+                      customCard('assets/octagon.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/parallelogram.png'),
+                      customCard('assets/pentagon.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/polygon.png'),
+                      customCard('assets/quadrilateral.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
                       customCard('assets/rectangle.png'),
+                      customCard('assets/rhombus.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/sector.png'),
+                      customCard('assets/semicircle.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/trapezoid.png'),
                       customCard('assets/square.png'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customCard('assets/triangle.png'),
                     ],
                   ),
 
