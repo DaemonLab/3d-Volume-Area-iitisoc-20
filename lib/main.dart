@@ -11,6 +11,22 @@ void main() {
       '/area' : (context) => Area(),
       '/square' : (context) => square(),
       '/rectangle' : (context) => rectangle(),
+      '/triangle' : (context) => triangle(),
+      '/annulus' : (context) => annulus(),
+      '/circle' : (context) => circle(),
+      '/ellipse' : (context) => ellipse(),
+      '/hexagon' : (context) => hexagon(),
+      '/kite' : (context) => kite(),
+      '/octagon' : (context) => octagon(),
+      '/parallelogram' : (context) => parallelogram(),
+      '/pentagon' : (context) => pentagon(),
+      '/polygon' : (context) => polygon(),
+      '/quadrilateral' : (context) => quadrilateral(),
+      '/rhombus' : (context) => rhombus(),
+      '/sector' : (context) => sector(),
+      '/semicircle' : (context) => semicircle(),
+      '/trapezoid' : (context) => trapezoid(),
+
     },
   ));
 }

@@ -10,6 +10,6 @@ class _triangleState extends State<triangle> {
   Widget build(BuildContext context) {
      return Scaffold(
       body: Text('Triangle'),
-    );;;
+    );
   }
 }

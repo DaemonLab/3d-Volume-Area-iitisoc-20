@@ -16,7 +16,7 @@ class _AreaState extends State<Area> {
     return InkWell(
       onTap: () {
         print(image);
-        //Navigator.pushNamed(context, '/${shape}');
+        Navigator.pushNamed(context, '/${shape}');
       },
       child: Card(
         child: Column(
