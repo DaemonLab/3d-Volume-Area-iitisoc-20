@@ -15,7 +15,7 @@ class _VolumeState extends State<Volume> {
     return InkWell(
       onTap: () {
         print(image);
-        //Navigator.pushNamed(context, '/${shape}');
+        Navigator.pushNamed(context, '/${shape}');
       },
       child: Card(
         child: Column(

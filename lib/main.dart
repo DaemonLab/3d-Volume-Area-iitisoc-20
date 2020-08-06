@@ -26,6 +26,21 @@ void main() {
       '/sector' : (context) => sector(),
       '/semicircle' : (context) => semicircle(),
       '/trapezoid' : (context) => trapezoid(),
+      '/box' : (context) => box(),
+      '/capsule' : (context) => capsule(),
+      '/cone' : (context) => cone(),
+      '/cube' : (context) => cube(),
+      '/cylinder' : (context) => cylinder(),
+      '/cylinder-hollow' : (context) => cylinder_hollow(),
+      '/ellipsoid' : (context) => ellipsoid(),
+      '/frustum' : (context) => frustum(),
+      '/hemisphere' : (context) => hemisphere(),
+      '/pyramid' : (context) => pyramid(),
+      '/pyramid-truncated' : (context) => pyramid_truncated(),
+      '/sphere' : (context) => sphere(),
+      '/spherical-cap' : (context) => spherical_cap(),
+      '/triangular-prism' : (context) => triangular_prism(),
+
 
     },
   ));
