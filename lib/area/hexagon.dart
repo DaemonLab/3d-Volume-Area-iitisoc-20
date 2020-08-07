@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:volumearea/area/outputScreen_one.dart';
+import "dart:math" show sqrt;
 
 class hexagon extends StatefulWidget {
   @override
@@ -6,10 +8,14 @@ class hexagon extends StatefulWidget {
 }
 
 class _hexagonState extends State<hexagon> {
+  double a = 0.0;
+  double answer = 0.0;
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Hexagon'),
-    );
+    return OutputScreenOne(variableName: "a", heading: "hexagon", formula: (a) {
+        return (3/2)*sqrt(3)*a*a;
+      },);
   }
 }

@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
+import "dart:math" show pi, sqrt;
 
+class OutputScreenOne extends StatefulWidget {
+  String variableName, heading;
 
-class square extends StatefulWidget {
+  Function(double) formula;
+  OutputScreenOne({this.variableName, this.heading, this.formula});
   @override
-  _squareState createState() => _squareState();
+  _OutputScreenOneState createState() => _OutputScreenOneState();
 }
 
-class _squareState extends State<square> {
-  double a = 0.0;
-  double answer = 0.0;
+class _OutputScreenOneState extends State<OutputScreenOne> {
 
+  double variableValue = 0.0;
+  double answer = 0.0;
 
   @override
   Widget build(BuildContext context) {
+    String heading = widget.heading;
+    String variableName = widget.variableName;
+    Function (double) formula = widget.formula;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Square'),
+        title: Text('${heading[0].toUpperCase()}${heading.substring(1)}'),
         centerTitle: true,
       ),
       body: Column(
@@ -29,14 +36,14 @@ class _squareState extends State<square> {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/square.png',
+                      'assets/$heading.png',
                       height: 150,
                       width: 150,
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    Text('square')
+                    Text('${heading[0].toUpperCase()}${heading.substring(1)}') // First letter capital
                   ],
                 ),
                 elevation: 0,
@@ -47,7 +54,7 @@ class _squareState extends State<square> {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Text('a = ', style: TextStyle(fontSize: 28),),
+                Text('$variableName = ', style: TextStyle(fontSize: 28),),
                 SizedBox(width: 10,),
                 Expanded(
                   child: TextField(
@@ -55,9 +62,9 @@ class _squareState extends State<square> {
                       setState(() {
                         if(text.length == 0)
                           text = "0";
-                        a = double.parse(text);
+                        variableValue = double.parse(text);
 
-                        answer = a*a;
+                        answer = formula(variableValue);
                       });
                     },
                     keyboardType: TextInputType.numberWithOptions(
@@ -67,7 +74,6 @@ class _squareState extends State<square> {
               ],
             ),
           ),
-
 
 
           SizedBox(height: 20,),

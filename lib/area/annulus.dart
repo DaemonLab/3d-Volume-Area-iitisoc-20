@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_two.dart';
+import "dart:math" show pi;
 
 class annulus extends StatefulWidget {
   @override
@@ -6,10 +8,12 @@ class annulus extends StatefulWidget {
 }
 
 class _annulusState extends State<annulus> {
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Annulus'),
-    );
+    return OutputScreenTwo(variableName1: "r", variableName2: "R", heading: "annulus", formula: (r,R) {
+      return pi*(R*R-r*r);
+    },);
   }
 }

@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
-import "dart:math" show pi;
+import "dart:math" show pi, sqrt;
 
-class ellipse extends StatefulWidget {
+class OutputScreenTwo extends StatefulWidget {
+  String variableName1, variableName2,heading;
+
+  Function(double, double) formula;
+  OutputScreenTwo({this.variableName1, this.variableName2, this.heading, this.formula});
   @override
-  _ellipseState createState() => _ellipseState();
+  _OutputScreenTwoState createState() => _OutputScreenTwoState();
 }
 
-class _ellipseState extends State<ellipse> {
-  double a = 0.0;
-  double b = 0.0;
-  double answer = 0.0;
+class _OutputScreenTwoState extends State<OutputScreenTwo> {
 
+  double variableValue1 = 0.0;
+  double variableValue2 = 0.0;
+  double answer = 0.0;
 
   @override
   Widget build(BuildContext context) {
+    String heading = widget.heading;
+    String variableName1 = widget.variableName1;
+    String variableName2 = widget.variableName2;
+    Function (double, double) formula = widget.formula;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Ellipse'),
+        title: Text('${heading[0].toUpperCase()}${heading.substring(1)}'),
         centerTitle: true,
       ),
       body: Column(
@@ -30,14 +38,14 @@ class _ellipseState extends State<ellipse> {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/ellipse.png',
+                      'assets/$heading.png',
                       height: 150,
                       width: 150,
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    Text('Ellipse')
+                    Text('${heading[0].toUpperCase()}${heading.substring(1)}')
                   ],
                 ),
                 elevation: 0,
@@ -48,7 +56,7 @@ class _ellipseState extends State<ellipse> {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Text('a = ', style: TextStyle(fontSize: 28),),
+                Text('$variableName1 = ', style: TextStyle(fontSize: 28),),
                 SizedBox(width: 10,),
                 Expanded(
                   child: TextField(
@@ -56,9 +64,9 @@ class _ellipseState extends State<ellipse> {
                       setState(() {
                         if(text.length == 0)
                           text = "0";
-                        a = double.parse(text);
+                        variableValue1 = double.parse(text);
 
-                        answer = pi*a*b;
+                        answer = formula(variableValue1,variableValue2);
                         if(answer <= 0)
                           answer = 0.0;
                       });
@@ -74,7 +82,7 @@ class _ellipseState extends State<ellipse> {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Text('b = ', style: TextStyle(fontSize: 28),),
+                Text('$variableName2 = ', style: TextStyle(fontSize: 28),),
                 SizedBox(width: 10,),
                 Expanded(
                   child: TextField(
@@ -82,9 +90,9 @@ class _ellipseState extends State<ellipse> {
                       setState(() {
                         if(text.length == 0)
                           text = "0";
-                        b = double.parse(text);
+                        variableValue2 = double.parse(text);
 
-                        answer = pi*a*b;
+                        answer = formula(variableValue1,variableValue2);
                         if(answer <= 0)
                           answer = 0.0;
                       });
