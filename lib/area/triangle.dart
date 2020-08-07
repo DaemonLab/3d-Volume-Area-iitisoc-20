@@ -9,7 +9,8 @@ class _triangleState extends State<triangle> {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-      body: Text('Triangle'),
+       //TODO: Multiple ways to take input in quadrilateral
+       body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

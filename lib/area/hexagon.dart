@@ -8,9 +8,6 @@ class hexagon extends StatefulWidget {
 }
 
 class _hexagonState extends State<hexagon> {
-  double a = 0.0;
-  double answer = 0.0;
-
 
   @override
   Widget build(BuildContext context) {

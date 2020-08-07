@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'outputScreen_one.dart';
 import "dart:math" show pi;
@@ -10,9 +8,6 @@ class circle extends StatefulWidget {
 }
 
 class _circleState extends State<circle> {
-
-
-
 
   @override
   Widget build(BuildContext context) {

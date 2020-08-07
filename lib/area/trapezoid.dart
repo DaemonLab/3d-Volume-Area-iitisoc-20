@@ -9,7 +9,8 @@ class _trapezoidState extends State<trapezoid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Trapezoid'),
+      //TODO: Multiple ways to take input in trapezoid
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

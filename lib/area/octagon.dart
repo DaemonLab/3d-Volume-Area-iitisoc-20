@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_one.dart';
+import 'dart:math' show sqrt;
 
 class octagon extends StatefulWidget {
   @override
@@ -8,8 +10,8 @@ class octagon extends StatefulWidget {
 class _octagonState extends State<octagon> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Octagon'),
-    );
+    return OutputScreenOne(variableName: "a", heading: "octagon", formula: (a) {
+      return 2*(1+sqrt(2))*a*a;
+    },);
   }
 }

@@ -9,7 +9,8 @@ class _parallelogramState extends State<parallelogram> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Parallelogram'),
+      //TODO: Multiple ways to take input in parallelogram
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

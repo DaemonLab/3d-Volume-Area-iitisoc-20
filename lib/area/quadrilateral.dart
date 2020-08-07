@@ -9,7 +9,8 @@ class _quadrilateralState extends State<quadrilateral> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Quadrilateral'),
+      //TODO: Multiple ways to take input in quadrilateral
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

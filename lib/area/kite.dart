@@ -9,7 +9,8 @@ class _kiteState extends State<kite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Kite'),
+      //TODO: Multiple ways to take input in kite
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

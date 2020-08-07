@@ -9,7 +9,6 @@ class annulus extends StatefulWidget {
 
 class _annulusState extends State<annulus> {
 
-
   @override
   Widget build(BuildContext context) {
     return OutputScreenTwo(variableName1: "r", variableName2: "R", heading: "annulus", formula: (r,R) {

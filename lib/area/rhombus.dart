@@ -9,7 +9,8 @@ class _rhombusState extends State<rhombus> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Rhombus'),
+      //TODO: Multiple ways to take input in rhombus
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

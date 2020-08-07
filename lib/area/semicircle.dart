@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_one.dart';
+import "dart:math" show pi;
 
 class semicircle extends StatefulWidget {
   @override
@@ -6,10 +8,11 @@ class semicircle extends StatefulWidget {
 }
 
 class _semicircleState extends State<semicircle> {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Semicircle'),
-    );
+    return OutputScreenOne(variableName: "r", heading: "semicircle", formula: (r) {
+      return pi*r*r/2;
+    },);
   }
 }
