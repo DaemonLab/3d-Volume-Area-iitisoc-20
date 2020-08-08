@@ -9,7 +9,8 @@ class _triangular_prismState extends State<triangular_prism> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Triangular-Prism'),
+      //TODO: Multiple ways to take input in triangular-prism
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

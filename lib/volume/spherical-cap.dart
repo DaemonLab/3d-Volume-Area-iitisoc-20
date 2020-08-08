@@ -9,7 +9,8 @@ class _spherical_capState extends State<spherical_cap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Spherical-Cap'),
+      //TODO: Multiple ways to take input in spherical-cap
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

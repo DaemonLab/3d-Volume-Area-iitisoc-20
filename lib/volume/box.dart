@@ -10,7 +10,8 @@ class _boxState extends State<box> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Box'),
+      //TODO: Multiple ways to take input in box
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

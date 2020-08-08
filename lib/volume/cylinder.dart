@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_two.dart';
+import "dart:math" show pi;
 
 class cylinder extends StatefulWidget {
   @override
@@ -8,8 +10,8 @@ class cylinder extends StatefulWidget {
 class _cylinderState extends State<cylinder> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Cylinder'),
-    );
+    return OutputScreenTwo(variableName1: "r", variableName2: "h", heading: "cylinder", formula: (r,h) {
+      return pi*r*r*h;
+    },);
   }
 }

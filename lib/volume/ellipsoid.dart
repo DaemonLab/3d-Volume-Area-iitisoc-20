@@ -9,7 +9,8 @@ class _ellipsoidState extends State<ellipsoid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Ellipsoid'),
+      //TODO: Multiple ways to take input in ellipsoid
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

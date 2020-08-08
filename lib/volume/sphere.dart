@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_one.dart';
+import "dart:math" show pi;
 
 class sphere extends StatefulWidget {
   @override
@@ -8,8 +10,8 @@ class sphere extends StatefulWidget {
 class _sphereState extends State<sphere> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Sphere'),
-    );
+    return OutputScreenOne(variableName: "r", heading: "sphere", formula: (r) {
+      return pi*r*r*r*(4/3);
+    },);
   }
 }

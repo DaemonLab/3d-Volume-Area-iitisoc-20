@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_one.dart';
+import "dart:math" show pi;
 
 class hemisphere extends StatefulWidget {
   @override
@@ -8,8 +10,8 @@ class hemisphere extends StatefulWidget {
 class _hemisphereState extends State<hemisphere> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Hemisphere'),
-    );
+    return OutputScreenOne(variableName: "r", heading: "hemisphere", formula: (r) {
+      return pi*r*r*r*(2/3);
+    },);
   }
 }

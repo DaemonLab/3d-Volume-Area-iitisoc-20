@@ -11,7 +11,7 @@ class _VolumeState extends State<Volume> {
     // image variable stores the location of the image of the object. ex. assets/rectangle.dart
     String shape = image.substring(image.indexOf('/')+1, image.length-4);
 
-    // using InkWell to make tap able cards
+    // using InkWell to make tap-able cards
     return InkWell(
       onTap: () {
         print(image);

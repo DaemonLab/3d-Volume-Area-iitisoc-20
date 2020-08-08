@@ -9,7 +9,8 @@ class _pyramid_truncatedState extends State<pyramid_truncated> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Pyramid_Truncated'),
+      //TODO: Multiple ways to take input in pyramid-truncated
+      body: Center(child: Text('Not Yet Implemented')),
     );
   }
 }

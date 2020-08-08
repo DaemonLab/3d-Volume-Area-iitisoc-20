@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'outputScreen_one.dart';
 
 class cube extends StatefulWidget {
   @override
@@ -8,8 +9,8 @@ class cube extends StatefulWidget {
 class _cubeState extends State<cube> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Cube'),
-    );
+    return OutputScreenOne(variableName: "a", heading: "cube", formula: (a) {
+      return a*a*a;
+    },);
   }
 }
