@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import "dart:math" show pi, sqrt;
 
-class OutputScreenTwo extends StatefulWidget {
-  String variableName1, variableName2,heading;
+class OutputScreenThree extends StatefulWidget {
+  String variableName1, variableName2,variableName3,heading;
 
-  Function(double, double) formula;
-  OutputScreenTwo({this.variableName1, this.variableName2, this.heading, this.formula});
+  Function(double, double, double) formula;
+  OutputScreenThree({this.variableName1, this.variableName2, this.variableName3, this.heading, this.formula});
   @override
-  _OutputScreenTwoState createState() => _OutputScreenTwoState();
+  _OutputScreenThreeState createState() => _OutputScreenThreeState();
 }
 
-class _OutputScreenTwoState extends State<OutputScreenTwo> {
-
+class _OutputScreenThreeState extends State<OutputScreenThree> {
   double variableValue1 = 0.0;
   double variableValue2 = 0.0;
+  double variableValue3 = 0.0;
   double answer = 0.0;
-
   @override
   Widget build(BuildContext context) {
     String heading = widget.heading;
     String variableName1 = widget.variableName1;
     String variableName2 = widget.variableName2;
-    Function (double, double) formula = widget.formula;
+    String variableName3 = widget.variableName3;
+    Function (double, double, double) formula = widget.formula;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -66,7 +65,7 @@ class _OutputScreenTwoState extends State<OutputScreenTwo> {
                           text = "0";
                         variableValue1 = double.parse(text);
 
-                        answer = formula(variableValue1,variableValue2);
+                        answer = formula(variableValue1,variableValue2,variableValue3);
                         if(answer <= 0)
                           answer = 0.0;
                       });
@@ -92,7 +91,34 @@ class _OutputScreenTwoState extends State<OutputScreenTwo> {
                           text = "0";
                         variableValue2 = double.parse(text);
 
-                        answer = formula(variableValue1,variableValue2);
+                        answer = formula(variableValue1,variableValue2,variableValue3);
+                        if(answer <= 0)
+                          answer = 0.0;
+                      });
+                    },
+                    keyboardType: TextInputType.numberWithOptions(
+                        signed: false, decimal: true),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              children: [
+                Text('$variableName3 = ', style: TextStyle(fontSize: 28),),
+                SizedBox(width: 10,),
+                Expanded(
+                  child: TextField(
+                    onChanged: (text){
+                      setState(() {
+                        if(text.length == 0)
+                          text = "0";
+                        variableValue3 = double.parse(text);
+
+                        answer = formula(variableValue1,variableValue2,variableValue3);
                         if(answer <= 0)
                           answer = 0.0;
                       });

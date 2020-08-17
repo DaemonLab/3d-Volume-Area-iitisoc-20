@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import "dart:math" show pi, sqrt;
 
-class OutputScreenOne extends StatefulWidget {
-  String variableName, heading;
+class OutputScreenTwo extends StatefulWidget {
+  String variableName1, variableName2,heading;
 
-  Function(double) formula;
-  OutputScreenOne({this.variableName, this.heading, this.formula});
+  Function(double, double) formula;
+  OutputScreenTwo({this.variableName1, this.variableName2, this.heading, this.formula});
   @override
-  _OutputScreenOneState createState() => _OutputScreenOneState();
+  _OutputScreenTwoState createState() => _OutputScreenTwoState();
 }
 
-class _OutputScreenOneState extends State<OutputScreenOne> {
+class _OutputScreenTwoState extends State<OutputScreenTwo> {
 
-  double variableValue = 0.0;
+  double variableValue1 = 0.0;
+  double variableValue2 = 0.0;
   double answer = 0.0;
 
   @override
   Widget build(BuildContext context) {
     String heading = widget.heading;
-    String variableName = widget.variableName;
-    Function (double) formula = widget.formula;
+    String variableName1 = widget.variableName1;
+    String variableName2 = widget.variableName2;
+    Function (double, double) formula = widget.formula;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -43,7 +44,7 @@ class _OutputScreenOneState extends State<OutputScreenOne> {
                     SizedBox(
                       height: 20,
                     ),
-                    Text('${heading[0].toUpperCase()}${heading.substring(1)}') // First letter capital
+                    Text('${heading[0].toUpperCase()}${heading.substring(1)}')
                   ],
                 ),
                 elevation: 0,
@@ -54,7 +55,7 @@ class _OutputScreenOneState extends State<OutputScreenOne> {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Text('$variableName = ', style: TextStyle(fontSize: 28),),
+                Text('$variableName1 = ', style: TextStyle(fontSize: 28),),
                 SizedBox(width: 10,),
                 Expanded(
                   child: TextField(
@@ -62,9 +63,11 @@ class _OutputScreenOneState extends State<OutputScreenOne> {
                       setState(() {
                         if(text.length == 0)
                           text = "0";
-                        variableValue = double.parse(text);
+                        variableValue1 = double.parse(text);
 
-                        answer = formula(variableValue);
+                        answer = formula(variableValue1,variableValue2);
+                        if(answer <= 0)
+                          answer = 0.0;
                       });
                     },
                     keyboardType: TextInputType.numberWithOptions(
@@ -74,6 +77,33 @@ class _OutputScreenOneState extends State<OutputScreenOne> {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              children: [
+                Text('$variableName2 = ', style: TextStyle(fontSize: 28),),
+                SizedBox(width: 10,),
+                Expanded(
+                  child: TextField(
+                    onChanged: (text){
+                      setState(() {
+                        if(text.length == 0)
+                          text = "0";
+                        variableValue2 = double.parse(text);
+
+                        answer = formula(variableValue1,variableValue2);
+                        if(answer <= 0)
+                          answer = 0.0;
+                      });
+                    },
+                    keyboardType: TextInputType.numberWithOptions(
+                        signed: false, decimal: true),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
 
 
           SizedBox(height: 20,),

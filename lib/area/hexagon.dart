@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:volumearea/area/outputScreen_one.dart';
+import 'package:volumearea/outputScreen_one.dart';
 import "dart:math" show sqrt;
 
 class hexagon extends StatefulWidget {
