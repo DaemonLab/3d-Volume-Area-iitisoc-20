@@ -27,94 +27,96 @@ class _OutputScreenTwoState extends State<OutputScreenTwo> {
         title: Text('${heading[0].toUpperCase()}${heading.substring(1)}'),
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Card(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      'assets/$heading.png',
-                      height: 150,
-                      width: 150,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text('${heading[0].toUpperCase()}${heading.substring(1)}')
-                  ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Card(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/$heading.png',
+                        height: 150,
+                        width: 150,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text('${heading[0].toUpperCase()}${heading.substring(1)}')
+                    ],
+                  ),
+                  elevation: 0,
                 ),
-                elevation: 0,
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Text('$variableName1 = ', style: TextStyle(fontSize: 28),),
+                  SizedBox(width: 10,),
+                  Expanded(
+                    child: TextField(
+                      onChanged: (text){
+                        setState(() {
+                          if(text.length == 0)
+                            text = "0";
+                          variableValue1 = double.parse(text);
+
+                          answer = formula(variableValue1,variableValue2);
+                          if(answer <= 0)
+                            answer = 0.0;
+                        });
+                      },
+                      keyboardType: TextInputType.numberWithOptions(
+                          signed: false, decimal: true),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                Text('$variableName1 = ', style: TextStyle(fontSize: 28),),
-                SizedBox(width: 10,),
-                Expanded(
-                  child: TextField(
-                    onChanged: (text){
-                      setState(() {
-                        if(text.length == 0)
-                          text = "0";
-                        variableValue1 = double.parse(text);
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Text('$variableName2 = ', style: TextStyle(fontSize: 28),),
+                  SizedBox(width: 10,),
+                  Expanded(
+                    child: TextField(
+                      onChanged: (text){
+                        setState(() {
+                          if(text.length == 0)
+                            text = "0";
+                          variableValue2 = double.parse(text);
 
-                        answer = formula(variableValue1,variableValue2);
-                        if(answer <= 0)
-                          answer = 0.0;
-                      });
-                    },
-                    keyboardType: TextInputType.numberWithOptions(
-                        signed: false, decimal: true),
+                          answer = formula(variableValue1,variableValue2);
+                          if(answer <= 0)
+                            answer = 0.0;
+                        });
+                      },
+                      keyboardType: TextInputType.numberWithOptions(
+                          signed: false, decimal: true),
+                    ),
                   ),
-                ),
+                ],
+              ),
+            ),
+
+
+
+            SizedBox(height: 20,),
+            // Result
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(answer.toString())
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                Text('$variableName2 = ', style: TextStyle(fontSize: 28),),
-                SizedBox(width: 10,),
-                Expanded(
-                  child: TextField(
-                    onChanged: (text){
-                      setState(() {
-                        if(text.length == 0)
-                          text = "0";
-                        variableValue2 = double.parse(text);
-
-                        answer = formula(variableValue1,variableValue2);
-                        if(answer <= 0)
-                          answer = 0.0;
-                      });
-                    },
-                    keyboardType: TextInputType.numberWithOptions(
-                        signed: false, decimal: true),
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-
-
-          SizedBox(height: 20,),
-          // Result
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(answer.toString())
-            ],
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

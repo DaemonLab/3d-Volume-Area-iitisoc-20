@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'selector_2.dart';
+import 'package:volumearea/selector_2.dart';
 
 class kite extends StatefulWidget {
   @override
