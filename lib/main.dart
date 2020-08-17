@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:volumearea/area/area.dart';
+import 'package:volumearea/area/kite1.dart';
+import 'package:volumearea/area/kite2.dart';
 import 'package:volumearea/volume/volume.dart';
 import 'importing.dart'; // holds all the imports for the project
 
@@ -17,6 +19,8 @@ void main() {
       '/ellipse' : (context) => ellipse(),
       '/hexagon' : (context) => hexagon(),
       '/kite' : (context) => kite(),
+      '/kite1' : (context) => kite1(),
+      '/kite2' : (context) => kite2(),
       '/octagon' : (context) => octagon(),
       '/parallelogram' : (context) => parallelogram(),
       '/pentagon' : (context) => pentagon(),

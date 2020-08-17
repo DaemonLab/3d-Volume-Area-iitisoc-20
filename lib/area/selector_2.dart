@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Selector extends StatefulWidget {
-  String title, text1, text2;
-  Widget wid1, wid2;
-  Selector({this.title, this.text1, this.text2, this.wid1, this.wid2});
+  String title, text1, text2, route1, route2;
+  Selector({this.title, this.text1, this.text2, this.route1, this.route2});
   @override
   _SelectorState createState() => _SelectorState();
 }
 
 class Dropdown extends StatefulWidget {
-  String item1, item2;
-  Widget wid1, wid2;
-  Dropdown({this.item1, this.item2, this.wid1, this.wid2});
+  String item1, item2, route1, route2;
+  Dropdown({this.item1, this.item2, this.route1, this.route2});
   @override
   _DropdownState createState() => _DropdownState();
 }
@@ -30,8 +28,6 @@ class _DropdownState extends State<Dropdown> {
   Widget build(BuildContext context) {
     String item1 = widget.item1;
     String item2 = widget.item2;
-    Widget wid1 = widget.wid1;
-    Widget wid2 = widget.wid2;
     return Scaffold(
       body: Center(
         child: Column(
@@ -52,11 +48,14 @@ class _DropdownState extends State<Dropdown> {
               onChanged: (String data) {
                 setState(() {
                   dropdownValue = data;
-                  if(data == item1){
-                    return wid1;
-                  }
+                  print(data);
+                  print(item1);
+                  print(widget.route1);
+                  print(widget.route2);
+                  if(data == item1)
+                    Navigator.pushNamed(context, widget.route1);
                   else
-                    return wid2;
+                    Navigator.pushNamed(context, widget.route2);
                 });
               },
             )
@@ -81,10 +80,7 @@ class _SelectorState extends State<Selector> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-              child: Dropdown(
-            item1: widget.text1,
-            item2: widget.text2,
-          ))
+              child: Dropdown(item1: widget.text1, item2: widget.text2, route2: widget.route2, route1: widget.route1,))
         ],
       ),
     );

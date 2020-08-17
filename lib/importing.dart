@@ -8,6 +8,8 @@ export 'package:volumearea/area/circle.dart';
 export 'package:volumearea/area/ellipse.dart';
 export 'package:volumearea/area/hexagon.dart';
 export 'package:volumearea/area/kite.dart';
+import 'package:volumearea/area/kite1.dart';
+import 'package:volumearea/area/kite2.dart';
 export 'package:volumearea/area/octagon.dart';
 export 'package:volumearea/area/parallelogram.dart';
 export 'package:volumearea/area/pentagon.dart';
