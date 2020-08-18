@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:volumearea/outputScreen_three.dart';
 class trapezoid extends StatefulWidget {
   @override
   _trapezoidState createState() => _trapezoidState();
@@ -8,9 +8,9 @@ class trapezoid extends StatefulWidget {
 class _trapezoidState extends State<trapezoid> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      //TODO: Multiple ways to take input in trapezoid
-      body: Center(child: Text('Not Yet Implemented')),
-    );
+    return OutputScreenThree(heading: "trapezoid", variableName1: "a", variableName2: "b", variableName3: "h", formula: (a,b,h) {
+      //TODO: Add snackbar for b < a
+      return (a+b)*h/2;
+    },);
   }
 }

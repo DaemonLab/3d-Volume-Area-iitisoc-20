@@ -8,9 +8,8 @@ class Volume extends StatefulWidget {
 class _VolumeState extends State<Volume> {
 
   Widget customCard(String image) {
-    // image variable stores the location of the image of the object. ex. assets/rectangle.dart
-    String shape = image.substring(image.indexOf('/')+1, image.length-4);
-
+    // image variable stores the location of the image of the object. ex. assets/rectangle_1.dart
+    String shape = image.substring(image.indexOf('/')+1, image.length-6);
     // using InkWell to make tap-able cards
     return InkWell(
       onTap: () {
