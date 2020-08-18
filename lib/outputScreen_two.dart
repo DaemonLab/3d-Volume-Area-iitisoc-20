@@ -38,7 +38,7 @@ class _OutputScreenTwoState extends State<OutputScreenTwo> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'assets/$heading.png',
+                        'assets/${heading}_1.png',
                         height: 150,
                         width: 150,
                       ),

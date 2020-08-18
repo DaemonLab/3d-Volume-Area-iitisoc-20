@@ -45,50 +45,50 @@ class _VolumeState extends State<Volume> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/box.png'),
-                      customCard('assets/capsule.png'),
+                      customCard('assets/box_1.png'),
+                      customCard('assets/capsule_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/cone.png'),
-                      customCard('assets/cube.png'),
+                      customCard('assets/cone_1.png'),
+                      customCard('assets/cube_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/cylinder.png'),
-                      customCard('assets/cylinder-hollow.png'),
+                      customCard('assets/cylinder_1.png'),
+                      customCard('assets/cylinder-hollow_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/ellipsoid.png'),
-                      customCard('assets/frustum.png'),
+                      customCard('assets/ellipsoid_1.png'),
+                      customCard('assets/frustum_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/hemisphere.png'),
-                      customCard('assets/pyramid.png'),
+                      customCard('assets/hemisphere_1.png'),
+                      customCard('assets/pyramid_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/pyramid-truncated.png'),
-                      customCard('assets/sphere.png'),
+                      customCard('assets/pyramid-truncated_1.png'),
+                      customCard('assets/sphere_1.png'),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      customCard('assets/spherical-cap.png'),
-                      customCard('assets/triangular-prism.png'),
+                      customCard('assets/spherical-cap_1.png'),
+                      customCard('assets/triangular-prism_1.png'),
                     ],
                   ),
                 ],
