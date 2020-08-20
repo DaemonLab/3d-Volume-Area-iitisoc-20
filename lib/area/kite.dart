@@ -11,8 +11,7 @@ class _kiteState extends State<kite> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Selector(title: "Kite", text1: "diagonals", text2: "two unequal sides + angle between them ", route1: '/kite1', route2: '/kite2',
-        ),
+        child: Selector(title: "kite", item1: "diagonals", item2: "two unequal sides + angle between them ",),
       ),
     );
   }
