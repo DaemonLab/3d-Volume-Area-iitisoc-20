@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:volumearea/area/area.dart';
-import 'package:volumearea/area/kite1.dart';
-import 'package:volumearea/area/kite2.dart';
 import 'package:volumearea/volume/volume.dart';
 import 'importing.dart'; // holds all the imports for the project
 
@@ -54,6 +52,10 @@ void main() {
       '/sphere' : (context) => sphere(),
       '/spherical-cap' : (context) => spherical_cap(),
       '/triangular-prism' : (context) => triangular_prism(),
+      'triangular-prism1' : (context) => triangular_prism1(),
+      'triangular-prism2' : (context) => triangular_prism2(),
+      'triangular-prism3' : (context) => triangular_prism3(),
+      'triangular-prism4' : (context) => triangular_prism4(),
 
 
     },

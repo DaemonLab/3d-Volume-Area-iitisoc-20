@@ -138,7 +138,7 @@ class _OutputScreenFourState extends State<OutputScreenFour> {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
-                  Text('$variableName3 = ', style: TextStyle(fontSize: 28),),
+                  Text('$variableName4 = ', style: TextStyle(fontSize: 28),),
                   SizedBox(width: 10,),
                   Expanded(
                     child: TextField(

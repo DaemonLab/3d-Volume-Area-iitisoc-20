@@ -43,3 +43,7 @@ export 'package:volumearea/volume/pyramid-truncated.dart';
 export 'package:volumearea/volume/sphere.dart';
 export 'package:volumearea/volume/spherical-cap.dart';
 export 'package:volumearea/volume/triangular-prism.dart';
+export 'package:volumearea/volume/triangular-prism1.dart';
+export 'package:volumearea/volume/triangular-prism2.dart';
+export 'package:volumearea/volume/triangular-prism3.dart';
+export 'package:volumearea/volume/triangular-prism4.dart';
