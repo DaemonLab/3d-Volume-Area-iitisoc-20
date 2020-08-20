@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class OutputScreenFour extends StatefulWidget {
   String variableName1, variableName2,variableName3,variableName4,heading;
-
+  int num;
   Function(double, double, double, double) formula;
-  OutputScreenFour({this.variableName1, this.variableName2, this.variableName3, this.variableName4, this.heading, this.formula});
+  OutputScreenFour({this.variableName1, this.variableName2, this.variableName3, this.variableName4, this.heading, this.num = 1, this.formula});
   @override
   _OutputScreenFourState createState() => _OutputScreenFourState();
 }
@@ -40,7 +40,7 @@ class _OutputScreenFourState extends State<OutputScreenFour> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'assets/${heading}_1.png',
+                        'assets/${heading}_${widget.num}.png',
                         height: 150,
                         width: 150,
                       ),

@@ -15,9 +15,9 @@ class _parallelogram2State extends State<parallelogram2> {
   }
   @override
   Widget build(BuildContext context) {
-    return OutputScreenThree(heading: "parallelogram", variableName1: "a", variableName2: "b", variableName3: "α", formula: (a,b,c) {
+    return OutputScreenThree(heading: "parallelogram", variableName1: "a", variableName2: "b", variableName3: "α",formula: (a,b,c) {
       var x = Angle.fromDegrees(c).sin;
       return a*b*x;
-    },);
+    }, num: 2,);
   }
 }

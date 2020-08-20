@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 class OutputScreenOne extends StatefulWidget {
   String variableName, heading;
+  int num;
   Function(double) formula;
-  OutputScreenOne({this.variableName, this.heading, this.formula});
+  OutputScreenOne({this.variableName, this.heading, this.formula, this.num = 1});
   @override
   _OutputScreenOneState createState() => _OutputScreenOneState();
 }
@@ -34,7 +35,7 @@ class _OutputScreenOneState extends State<OutputScreenOne> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'assets/${heading}_1.png',
+                        'assets/${heading}_${widget.num}.png',
                         height: 150,
                         width: 150,
                       ),

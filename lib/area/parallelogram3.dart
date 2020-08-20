@@ -18,6 +18,6 @@ class _parallelogram3State extends State<parallelogram3> {
     return OutputScreenThree(heading: "parallelogram", variableName1: "e", variableName2: "f", variableName3: "θ", formula: (e,f,t){
       var x = Angle.fromDegrees(t).sin;
       return e*f*x;
-    },);
+    }, num: 3,);
   }
 }
