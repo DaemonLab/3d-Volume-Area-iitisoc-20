@@ -8,7 +8,6 @@ class parallelogram1 extends StatefulWidget {
 class _parallelogram1State extends State<parallelogram1> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     print("parallelogram1");
   }
