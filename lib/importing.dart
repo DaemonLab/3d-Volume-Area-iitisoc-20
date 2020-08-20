@@ -3,6 +3,10 @@
 export 'package:volumearea/area/rectangle.dart';
 export 'package:volumearea/area/square.dart';
 export 'package:volumearea/area/triangle.dart';
+export 'package:volumearea/area/triangle1.dart';
+export 'package:volumearea/area/triangle2.dart';
+export 'package:volumearea/area/triangle3.dart';
+export 'package:volumearea/area/triangle4.dart';
 export 'package:volumearea/area/annulus.dart';
 export 'package:volumearea/area/circle.dart';
 export 'package:volumearea/area/ellipse.dart';
