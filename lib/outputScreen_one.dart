@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 class OutputScreenOne extends StatefulWidget {
   String variableName, heading;
-
   Function(double) formula;
   OutputScreenOne({this.variableName, this.heading, this.formula});
   @override
