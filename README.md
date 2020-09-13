@@ -51,6 +51,8 @@ selector_2 gives two items in the dropdown list, similarly [selector_3](https://
 
 [importing.dart](https://github.com/gg-dev-05/3dVolume-Area/blob/master/lib/importing.dart) has all the imports for the [main.dart](https://github.com/gg-dev-05/3dVolume-Area/blob/master/lib/main.dart) file.
 
+<i>Currently this app is just a simple calculator with no good UI elements. Future updates will make this app more user friendly along with more better user experience.</i>
+
    #progclubiiti #iitisoc
 
 
