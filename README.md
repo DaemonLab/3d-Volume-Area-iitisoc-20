@@ -53,6 +53,6 @@ selector_2 gives two items in the dropdown list, similarly [selector_3](https://
 
 <i>Currently this app is just a simple calculator with no good UI elements. Future updates will make this app more user friendly along with more better user experience.</i>
 
-   #progclubiiti #iitisoc
+   Project made under the mentorship of [Adarsh Baghel](https://github.com/Amagnum) and [Harshil Bhavsar](https://github.com/bhavsarharshil)
 
 
